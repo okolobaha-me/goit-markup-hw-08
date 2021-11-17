@@ -1,0 +1,25 @@
+.logo {
+  @extend %link;
+
+  color: $header-logo-color;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  &__web {
+    color: $main-accent-color;
+  }
+}
+
+.footer__logo {
+  color: $contrast-text-color;
+  padding: 24px 0;
+}
+
+.page-header__logo {
+  display: block;
+  padding: 20px 0;
+  margin-right: 93px;
+}

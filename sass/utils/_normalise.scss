@@ -1,0 +1,19 @@
+@import './variables';
+
+body {
+  font-family: roboto, sans-serif;
+  color: $main-text-color;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}

@@ -1,0 +1,90 @@
+.page-header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    @extend %list;
+
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    @extend %link;
+
+    display: inline-block;
+    padding: 32px 0;
+
+    color: $secondary-text-color;
+
+    transition: $transotopn-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    @extend %hover-link;
+  }
+
+  &__link--active-page {
+    position: relative;
+
+    color: $main-accent-color;
+  }
+
+  &__link--active-page::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    border: 2px solid $main-accent-color;
+    border-radius: 2px;
+  }
+}
+
+.contacts-list {
+  @extend %list;
+  display: flex;
+  margin-left: auto;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    @extend %link;
+
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+
+    color: $main-text-color;
+
+    fill: $main-text-color;
+    transition: $transotopn-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    @extend %hover-link;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

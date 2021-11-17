@@ -1,0 +1,44 @@
+.clients {
+  @extend %section;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    @extend %list;
+
+    display: flex;
+    margin-top: 50px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    @extend %link;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    fill: #afb1b8;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.clients__link:hover,
+.clients__link:focus {
+  border-color: $main-accent-color;
+  fill: $main-accent-color;
+  outline: none;
+}

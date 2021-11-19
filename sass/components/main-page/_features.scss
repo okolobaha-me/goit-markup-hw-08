@@ -1,16 +1,33 @@
 .features-section {
   @extend %section;
-  padding-bottom: 0;
+
+  @media screen and (min-width: $pc-width) {
+    padding-bottom: 0;
+  }
 }
 
 .features {
   @extend %list;
-
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -15px 0;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: -15px -15px;
+  }
 
   &__item {
-    width: 270px;
+    margin: 15px 0;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 354px;
+      margin: 15px 15px;
+    }
+
+    @media screen and (min-width: $pc-width) {
+      width: 270px;
+      margin: 15px 15px;
+    }
   }
 
   &__icon-wrapper {
@@ -19,7 +36,6 @@
     justify-content: center;
 
     height: 120px;
-    width: 270px;
 
     background-color: $secondary-bg-color;
     border-radius: 4px;
@@ -27,6 +43,10 @@
 
   &__title {
     margin-top: 30px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
 
     color: $main-title-color;
     font-weight: 700;

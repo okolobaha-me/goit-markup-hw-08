@@ -20,46 +20,78 @@
   <body>
     <header class="page-header">
       <div class="container page-header__container">
-        <nav class="navigation">
-          <a href="./index.html" class="logo page-header__logo"
-            ><span class="logo__web">Web</span>Studio</a
-          >
+        <a href="./index.html" class="logo page-header__logo"
+          ><span class="logo__web">Web</span>Studio</a
+        >
+        <!-- is-hidden -->
+        <div class="menu js-menu-container" id="mobile-menu">
+          <nav class="navigation">
+            <!-- nav bar -->
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html" class="navigation__link navigation__link--active-page"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./portfolio.html" class="navigation__link">Портфолио </a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
 
-          <!-- nav bar -->
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="./index.html" class="navigation__link">Студия</a>
-            </li>
-            <li class="navigation__item">
-              <a href="./portfolio.html" class="navigation__link navigation__link--active-page"
-                >Портфолио
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="" class="navigation__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+          <!-- contacts bar -->
+          <div class="contacts-wrapper">
+            <ul class="contacts-list">
+              <li class="contacts-list__item">
+                <a href="mailto:info@devstudio.com" class="contacts-list__link mail"
+                  ><svg style="width: 16px; height: 12px" class="contacts-list__icon">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts-list__item">
+                <a href="tel:+380961111111" class="contacts-list__link phone">
+                  <svg style="width: 10px; height: 16px" class="contacts-list__icon">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
 
-        <!-- contacts bar -->
-        <ul class="contacts-list">
-          <li class="contacts-list__item">
-            <a href="mailto:info@devstudio.com" class="contacts-list__link"
-              ><svg style="width: 16px; height: 12px" class="contacts-list__icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a href="tel:+380961111111" class="contacts-list__link">
-              <svg style="width: 10px; height: 16px" class="contacts-list__icon">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+            <ul class="header-social">
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Instagram</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Twitter</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Facebook</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- close menu button -->
+          <button type="button" class="menu__btn menu__btn--close js-close-menu">
+            <svg style="width: 19px; height: 19px" class="">
+              <use href="./images/icons.svg#menu-close"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- open menu button -->
+        <button type="button" class="menu__btn js-open-menu">
+          <svg style="width: 24px; height: 16px" class="">
+            <use href="./images/icons.svg#menu-open"></use>
+          </svg>
+        </button>
       </div>
     </header>
 

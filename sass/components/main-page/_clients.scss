@@ -3,17 +3,24 @@
 
   &__title {
     @extend %section-title;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $pc-width) {
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
     @extend %list;
 
     display: flex;
-    margin-top: 50px;
+    flex-wrap: wrap;
+
+    margin: -15px -15px;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+    margin: 15px 15px;
   }
 
   &__link {
@@ -23,7 +30,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 170px;
+    width: 210px;
     height: 92px;
 
     border: 1px solid #afb1b8;
@@ -33,6 +40,18 @@
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // @media screen and (max-width: 479px) {
+    //   width: 210px;
+    // }
+
+    @media screen and (min-width: $tablet-width) {
+      width: 226px;
+    }
+
+    @media screen and (min-width: $pc-width) {
+      width: 170px;
+    }
   }
 }
 

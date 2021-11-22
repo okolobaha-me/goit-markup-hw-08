@@ -1054,6 +1054,12 @@ svg {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 100vw;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1190,24 +1196,52 @@ svg {
 }
 
 .form__check-icon {
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  fill: #ffffff;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  background-color: #ffffff;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: block;
+  padding-left: 25px;
 }
 
-.form__agreement-checkbox:checked + .form__check-icon {
+.form__check-icon::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+  width: 16px;
+  height: 15px;
   background-color: #2196f3;
-  border-color: transparent;
+  border-radius: 2px;
   background-image: url(../images/unsprite/check-form.svg);
-  background-size: contain;
-  background-origin: border-box;
-  /* border: none; */
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__agreement-checkbox:checked + .form__check-icon::before {
+  opacity: 1;
+}
+
+.form__check-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__agreement-checkbox:checked + .form__check-icon::after {
+  opacity: 0;
 }
 
 .form__submit-btn {

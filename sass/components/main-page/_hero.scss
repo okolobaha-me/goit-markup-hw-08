@@ -11,12 +11,8 @@
   background-position: center;
   background-size: cover;
 
-  @media screen and (max-width: 767px) {
-    max-width: $mobile-width;
-  }
-
   @media screen and (min-width: $tablet-width) {
-    width: $tablet-width;
+    max-width: $tablet-width;
 
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/jpg/hero-tablet.jpg);
@@ -55,3 +51,11 @@
     padding: 10px 32px;
   }
 }
+
+// @media (min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   .box {
+//     background-image: url('photo@2x.png');
+//   }
+// }

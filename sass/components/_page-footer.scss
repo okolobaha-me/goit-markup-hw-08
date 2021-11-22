@@ -1,6 +1,5 @@
 .page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 
   font-size: 14px;
   line-height: 1.71;
@@ -8,20 +7,44 @@
 
   background-color: $footer-color;
 
-  &__column-wrapper {
-    margin: 30px auto;
+  @media screen and (min-width: $pc-width) {
+    padding-bottom: 60px;
+  }
+
+  &__element {
     text-align: center;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $pc-width) {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $pc-width) {
+      text-align: start;
+    }
+  }
+
+  &__raw-wrapper {
+    @media screen and (min-width: $tablet-width) {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}
+
+.page-footer__element:first-child {
+  @media screen and (min-width: $tablet-width) and (max-width: 1199px) {
+    margin-left: 61px;
   }
 }
 
 .footer-positioning {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin: -30px 0;
+  margin-bottom: -60px;
 
-  @media screen and (max-width: $tablet-width) {
-    // flex-direction: column;
+  @media screen and (min-width: $pc-width) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0;
   }
 }
 
@@ -64,12 +87,20 @@
 }
 
 .join {
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 165px;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    margin-left: 70px;
+  }
+
   &__title {
     @extend %footer-title;
   }
 
   &__social {
-    margin: 20px 0 0 0;
+    margin: 20px auto 0;
   }
 
   & .social__link {
@@ -88,22 +119,44 @@
 }
 
 .subscribe {
+  @media screen and (min-width: $pc-width) {
+    margin-left: 93px;
+    text-align: start;
+  }
+
+  &__form {
+    @media screen and (min-width: $pc-width) {
+      display: flex;
+    }
+  }
+
   &__title {
     @extend %footer-title;
     margin-bottom: 20px;
   }
 
   &__input {
-    width: 450px;
+    width: 100%;
     color: $contrast-text-color;
     padding: 15px 16px;
     margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.2;
 
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet-width) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: $pc-width) {
+      width: 358px;
+    }
   }
 
   &__input:hover,
@@ -122,6 +175,11 @@
     margin: 0 auto;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    @media screen and (min-width: $pc-width) {
+      margin-left: 12px;
+      height: 50px;
+    }
   }
 
   &__btn::after {

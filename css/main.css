@@ -459,15 +459,9 @@ svg {
   background-size: cover;
 }
 
-@media screen and (max-width: 767px) {
-  .hero {
-    max-width: 480px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
+    max-width: 768px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/jpg/hero-tablet.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/jpg/hero-tablet.jpg);
   }
@@ -776,6 +770,19 @@ svg {
 
 .clients__item {
   margin: 15px 15px;
+  width: calc(100% / 2 - 30px);
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc(100% / 6 - 30px);
+  }
 }
 
 .clients__link {
@@ -788,25 +795,13 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
+  width: 100%;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) {
-  .clients__link {
-    width: 226px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .clients__link {
-    width: 170px;
-  }
 }
 
 .clients__link:hover,
@@ -817,29 +812,67 @@ svg {
 }
 
 .page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   background-color: #2f303a;
 }
 
-.page-footer__column-wrapper {
-  margin: 30px auto;
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    padding-bottom: 60px;
+  }
+}
+
+.page-footer__element {
   text-align: center;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__element {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__element {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__raw-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__element:first-child {
+    margin-left: 61px;
+  }
 }
 
 .footer-positioning {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -30px 0;
+  margin-bottom: -60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-positioning {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-bottom: 0;
+  }
 }
 
 .adress {
@@ -872,8 +905,20 @@ svg {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .join {
+    margin-left: 165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+  }
+}
+
 .join__social {
-  margin: 20px 0 0 0;
+  margin: 20px auto 0;
 }
 
 .join .social__link {
@@ -890,20 +935,49 @@ svg {
   background-color: #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-left: 93px;
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .subscribe__title {
   margin-bottom: 20px;
 }
 
 .subscribe__input {
-  width: 450px;
+  width: 100%;
   color: #ffffff;
   padding: 15px 16px;
   margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.2;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+  }
 }
 
 .subscribe__input:hover, .subscribe__input:focus {
@@ -922,6 +996,13 @@ svg {
   margin: 0 auto;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__btn {
+    margin-left: 12px;
+    height: 50px;
+  }
 }
 
 .subscribe__btn::after {

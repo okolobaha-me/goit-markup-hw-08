@@ -165,15 +165,55 @@
           <h2 class="employment__title">Чем мы занимаемся</h2>
           <ul class="employment__list">
             <li class="employment__thumb">
-              <img src="./images/jpg/desctop-app.jpg" alt="" style="width: 370px; height: 294px" />
+              <picture>
+                <source
+                  srcset="./images/webp/desctop-app.webp 1x, ./images/webp/desctop-app@2x.webp 2x"
+                />
+                <source
+                  srcset="./images/jpg/desctop-app.jpg 1x, ./images/jpg/desctop-app@2x.jpg 2x"
+                />
+                <img
+                  src="./images/jpg/desctop-app.jpg"
+                  alt="десктопные прилижения"
+                  style="width: 370px; height: 294px"
+                />
+              </picture>
               <p class="employment__meta">Десктопные приложения</p>
             </li>
             <li class="employment__thumb">
-              <img src="./images/jpg/mobile-app.jpg" alt="" style="width: 370px; height: 294px" />
+              <picture>
+                <source
+                  srcset="./images/webp/mobile-app.webp 1x, ./images/webp/mobile-app@2x.webp 2x"
+                  sizes="25vw"
+                />
+                <source
+                  srcset="./images/jpg/mobile-app.jpg 1x, ./images/jpg/mobile-app@2x.jpg 2x"
+                  sizes="25vw"
+                />
+                <img
+                  src="./images/jpg/mobile-app.jpg"
+                  alt=">Мобильные приложения"
+                  style="width: 370px; height: 294px"
+                />
+              </picture>
               <p class="employment__meta">Мобильные приложения</p>
             </li>
             <li class="employment__thumb">
-              <img src="./images/jpg/design.jpg" alt="" style="width: 370px; height: 294px" />
+              <picture>
+                <source
+                  srcset="./images/webp/design.webp 1x, ./images/webp/design@2x.webp 2x"
+                  sizes="25vw"
+                />
+                <source
+                  srcset="./images/jpg/design.jpg 1x, ./images/jpg/design@2x.jpg 2x"
+                  sizes="25vw"
+                />
+                <img
+                  src="./images/jpg/design.jpg"
+                  alt="Дизайнерские решения"
+                  style="width: 370px; height: 294px"
+                />
+              </picture>
               <p class="employment__meta">Дизайнерские решения</p>
             </li>
           </ul>
@@ -187,7 +227,23 @@
 
           <ul class="members">
             <li class="members__card">
-              <img src="./images/jpg/igor-demianenko.jpg" alt="Игорь Демьяненко" width="100%" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/webp/igor-demianenko@2x.webp 540w,
+                    ./images/webp/igor-demianenko.webp    270w
+                  "
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                />
+                <source
+                  srcset="
+                    ./images/jpg/igor-demianenko@2x.jpg 540w,
+                    ./images/jpg/igor-demianenko.jpg    270w
+                  "
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                />
+                <img src="./images/jpg/igor-demianenko.jpg" alt="Игорь Демьяненко" width="100%" />
+              </picture>
               <div class="members__meta">
                 <h3 class="members__name">Игорь Демьяненко</h3>
                 <p lang="en" class="members__pos">Product Designer</p>
@@ -224,7 +280,18 @@
               </ul>
             </li>
             <li class="members__card">
-              <img src="./images/jpg/olha-repina.jpg" alt="Ольга Репина" width="100%" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/webp/olha-repina@2x.webp 540w,
+                    ./images/webp/olha-repina.webp    270w
+                  "
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" />
+                <source
+                  srcset="./images/jpg/olha-repina@2x.jpg 540w, ./images/jpg/olha-repina.jpg 270w"
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" />
+                <img src="./images/jpg/olha-repina.jpg" alt="Ольга Репина" width="100%"
+              /></picture>
               <div class="members__meta">
                 <h3 class="members__name">Ольга Репина</h3>
                 <p lang="en" class="members__pos">Frontend Developer</p>
@@ -261,7 +328,21 @@
               </ul>
             </li>
             <li class="members__card">
-              <img src="./images/jpg/nikolai-terasov.jpg" alt="Николай Тарасов" width="100%" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/webp/nikolai-terasov@2x.webp 540w,
+                    ./images/webp/nikolai-terasov.webp    270w
+                  "
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" />
+                <source
+                  srcset="
+                    ./images/jpg/nikolai-terasov@2x.jpg 540w,
+                    ./images/jpg/nikolai-terasov.jpg    270w
+                  "
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" />
+                <img src="./images/jpg/nikolai-terasov.jpg" alt="Николай Тарасов" width="100%"
+              /></picture>
               <div class="members__meta">
                 <h3 class="members__name">Николай Тарасов</h3>
                 <p lang="en" class="members__pos">Marketing</p>
@@ -298,7 +379,21 @@
               </ul>
             </li>
             <li class="members__card">
-              <img src="./images/jpg/mihail-ermakov.jpg" alt="Михаил Ермаков" width="100%" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/webp/mihail-ermakov@2x.webp 540w,
+                    ./images/webp/mihail-ermakov.webp    270w
+                  "
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" />
+                <source
+                  srcset="
+                    ./images/jpg/mihail-ermakov@2x.jpg 540w,
+                    ./images/jpg/mihail-ermakov.jpg    270w
+                  "
+                  sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" />
+                <img src="./images/jpg/mihail-ermakov.jpg" alt="Михаил Ермаков" width="100%"
+              /></picture>
               <div class="members__meta">
                 <h3 class="members__name">Михаил Ермаков</h3>
                 <p lang="en" class="members__pos">UI Designer</p>
@@ -391,34 +486,34 @@
     </main>
 
     <!-- footer -->
-    <footer class="page-footer" style="display: none">
+    <footer class="page-footer">
       <div class="container footer-positioning">
-        <div class="page-footer__column-wrapper">
-          <a href="" class="logo footer__logo"><span class="logo__web">Web</span>Studio</a>
+        <div class="page-footer__raw-wrapper">
+          <div class="page-footer__element">
+            <a href="" class="logo footer__logo"><span class="logo__web">Web</span>Studio</a>
 
-          <address class="adress">
-            <ul class="adress__list">
-              <li class="adress__item">
-                <a
-                  href="https://goo.gl/maps/vSzQUJ8hVPghcMWJ7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="adress__place"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
-              </li>
-              <li class="adress__item">
-                <a href="mailto:info@example.com" class="adress__link">info@example.com</a>
-              </li>
-              <li class="adress__item">
-                <a href="tel:+380991111111" class="adress__link">+38 099 111 11 11</a>
-              </li>
-            </ul>
-          </address>
-        </div>
+            <address class="adress">
+              <ul class="adress__list">
+                <li class="adress__item">
+                  <a
+                    href="https://goo.gl/maps/vSzQUJ8hVPghcMWJ7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="adress__place"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="adress__item">
+                  <a href="mailto:info@example.com" class="adress__link">info@example.com</a>
+                </li>
+                <li class="adress__item">
+                  <a href="tel:+380991111111" class="adress__link">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
 
-        <div class="page-footer__column-wrapper">
-          <section class="join">
+          <section class="join page-footer__element">
             <h2 class="join__title">присоединяйтесь</h2>
             <ul class="social join__social">
               <li class="social__item">
@@ -454,17 +549,15 @@
         </div>
 
         <!-- subscribe -->
-        <div class="page-footer__column-wrapper">
-          <section class="subscribe">
-            <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
-            <form class="subscribe__form">
-              <label class="subscribe__label">
-                <input type="email" placeholder="E-mail" class="subscribe__input" />
-              </label>
-              <button type="submit" class="subscribe__btn">Подписаться</button>
-            </form>
-          </section>
-        </div>
+        <section class="subscribe page-footer__element">
+          <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+          <form class="subscribe__form">
+            <label class="subscribe__label">
+              <input type="email" placeholder="E-mail" class="subscribe__input" />
+            </label>
+            <button type="submit" class="subscribe__btn">Подписаться</button>
+          </form>
+        </section>
       </div>
     </footer>
 

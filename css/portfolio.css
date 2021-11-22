@@ -738,6 +738,12 @@ svg {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .projects {
+    margin-top: 50px;
+  }
+}
+
 .projects__item {
   width: 100%;
   margin: 15px 0;

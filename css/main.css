@@ -66,6 +66,13 @@ svg {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 1199px) {
+  .employment__title, .team__title, .clients__title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
 .employment__thumb {
   position: relative;
   overflow: hidden;
@@ -691,6 +698,8 @@ svg {
 .members__name {
   color: #212121;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
 }
 
 .members__pos {

@@ -60,6 +60,10 @@
     margin-right: -15px;
   }
 
+  @media screen and (min-width: $pc-width) {
+    margin-top: 50px;
+  }
+
   &__item {
     width: 100%;
     margin: 15px 0;
